@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="blob"></div>
+    <div id="blur"></div>
+
+    <nav class="navi">
+      <h1>PORTFOLIO</h1>
+      <div id="menu-toggle-container">
+        <span id="menu-text">Menu</span>
+        <button id="menu-toggle"></button>
+      </div>
+    </nav>
+
+    <section class="hero" data-section="hero">
+      <div>
+        <h1 data-value="ENRIQUE LUNA ">ENRIQUE LUNA</h1>
+        <div class="hero-subtitle">Computer Systems Engineer</div>
+      </div>
+    </section>
+
+    <section id="about" class="content-section" data-section="about">
+      <h2 class="section-title">ABOUT ME</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <!-- Education -->
+          <h3>Education</h3>
+          <p>
+            Graduated from <strong>Instituto Nacional de México</strong> with a
+            degree in <strong>Computer Systems Engineering</strong>.
+          </p>
+
+          <!-- Existing About Me text -->
+          <p>
+            I'm an entry-level <strong>software engineer</strong> with
+            experience as Software Engineer Intern. My skills include
+            JavaScript, React, Angular, Spring Boot, Python, SQL, Linux, and
+            Docker. I am currently learning the basics of working with the cloud
+            using AWS, I like reading books about history and software
+            engineering. I would like to someday learn and transition into the
+            DevOps role. I'm eager to learn more and grow, both as a profesional
+            and as a person.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section id="experience" class="content-section" data-section="experience">
+      <h2 class="section-title">EXPERIENCE</h2>
+      <div class="experience-content">
+        <div class="experience-item">
+          <h2 class="experience-sub-title">Software Engineer Intern</h2>
+          <h2 class="company-date-sub-title">
+            Power Softec • 02/2025 - 06/2025
+          </h2>
+          <div class="article-container">
+            <ul>
+              <li>
+                Developed an Android app for warehouse inventory administration
+                using react native
+              </li>
+              <li>
+                Created an express server that uses the sap service layer api to
+                comunicate with SAP B1 through different REST endpoints
+              </li>
+              <li>Implemented JWT auth</li>
+              <li>
+                Gained hands-on experience in working with apis from the backend
+                and
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="content-section" data-section="skills">
+      <h2 class="section-title">SKILLS</h2>
+      <div class="skills-container">
+        <div class="skills-category">
+          <h3>Frontend Development</h3>
+          <div class="skills-row">
+            <div class="skill-item">
+              <i class="fab fa-react skill-icon"></i>
+              <span class="skill-name">React</span>
+            </div>
+            <div class="skill-item">
+              <i class="fab fa-angular skill-icon"></i>
+              <span class="skill-name">Angular.js</span>
+            </div>
+            <div class="skill-item">
+              <i class="fab fa-js-square skill-icon"></i>
+              <span class="skill-name">TypeScript</span>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-rocket skill-icon"></i>
+              <span class="skill-name">Next.js</span>
+            </div>
+            <div class="skill-item">
+              <i class="fab fa-css3-alt skill-icon"></i>
+              <span class="skill-name">Tailwind CSS</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills-category">
+          <h3>Backend Development</h3>
+          <div class="skills-row">
+            <div class="skill-item">
+              <i class="fab fa-node-js skill-icon"></i>
+              <span class="skill-name">Node.js</span>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-server skill-icon"></i>
+              <span class="skill-name">Express</span>
+            </div>
+            <div class="skill-item">
+              <i class="fab fa-java skill-icon"></i>
+              <span class="skill-name">Spring Boot</span>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-exchange-alt skill-icon"></i>
+              <span class="skill-name">REST APIs</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills-category">
+          <h3>Database & Cloud</h3>
+          <div class="skills-row">
+            <div class="skill-item">
+              <i class="fas fa-database skill-icon"></i>
+              <span class="skill-name">PostgreSQL</span>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-leaf skill-icon"></i>
+              <span class="skill-name">MongoDB</span>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-database skill-icon"></i>
+              <span class="skill-name">MySQL</span>
+            </div>
+            <div class="skill-item">
+              <i class="fab fa-docker skill-icon"></i>
+              <span class="skill-name">Docker</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills-category">
+          <h3>Tools & Other</h3>
+          <div class="skills-row">
+            <div class="skill-item">
+              <i class="fab fa-git-alt skill-icon"></i>
+              <span class="skill-name">Git</span>
+            </div>
+            <div class="skill-item">
+              <i class="fab fa-linux skill-icon"></i>
+              <span class="skill-name">Linux</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   <section id="projects" class="content-section" data-section="projects">
+      <h2 class="section-title">PROJECTS</h2>
+      <div class="projects-container">
+       <div class="project-item">
+  <div class="project-header">
+    <div class="project-title-wrapper">
+      <h3 class="project-title">Personal Finance Manager</h3>
+    </div>
+  </div>
+  <p class="project-description">
+    A full-stack application to track income, expenses, budgets, and savings goals. 
+    Includes authentication, category-based spending analysis, and interactive charts 
+    for budget progress. Designed with responsive UI and secure backend APIs.
+  </p>
+  <div class="project-tech-stack">
+    <span class="tech-badge">Angular</span>
+    <span class="tech-badge">Spring Boot</span>
+    <span class="tech-badge">MySQL</span>
+    <span class="tech-badge">JWT Authentication</span>
+  </div>
+          <div class="project-links">
+            <a href="#" target="_blank" class="project-link">Live Demo</a>
+            <a href="https://github.com/EnriqueLJ23/finances-frontend" target="_blank" class="project-link secondary">GitHub</a>
+          </div>
+        </div>
+
+      <div class="project-item">
+  <div class="project-header">
+    <div class="project-title-wrapper">
+      <h3 class="project-title">Web-Based OS Desktop Simulation</h3>
+    </div>
+  </div>
+  <p class="project-description">
+    A playful, interactive simulation of a desktop operating system built entirely with Angular. 
+    Features draggable windows, a functional taskbar, and responsive UI elements to mimic a real OS environment — 
+    all rendered in the browser without external libraries.
+  </p>
+  <div class="project-tech-stack">
+    <span class="tech-badge">Angular</span>
+    <span class="tech-badge">TypeScript</span>
+    <span class="tech-badge">HTML5</span>
+    <span class="tech-badge">CSS3</span>
+  </div>
+  <div class="project-links">
+    <a href="https://enriquelj23.github.io/WebOs/" target="_blank" class="project-link">Live Demo</a>
+    <a href="https://github.com/EnriqueLJ23/WebOs"  target="_blank" class="project-link secondary">GitHub</a>
+  </div>
+</div>
+ 
+  </section>
+
+    <footer class="footer-contact" data-section="contact">
+      <h2 class="section-title">CONTACT INFO</h2>
+      <div class="contact-content">
+        <div class="contact-info">
+          <div class="contact-item">
+            <h3>Email</h3>
+            <p>
+              <a href="mailto:jassoluna8@gmail.com">jassoluna8@gmail.com</a>
+            </p>
+          </div>
+       
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Enrique Luna. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <div id="menu">
+      <div id="menu-items">
+        <a href="#about" class="menu-item">ABOUT ME</a>
+        <a href="#skills" class="menu-item">SKILLS</a>
+        <a href="#projects" class="menu-item">PROJECTS</a>
+        <a href="#contact" class="menu-item">CONTACT INFO</a>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
