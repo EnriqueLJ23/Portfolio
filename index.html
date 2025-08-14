@@ -44,31 +44,59 @@
       </div>
     </section>
 
-    <section id="about" class="content-section" data-section="about">
+    <section class="content-section">
       <h2 class="section-title">ABOUT ME</h2>
-      <div class="about-content">
-        <div class="about-text">
-          <!-- Education -->
-          <h3>Education</h3>
-          <p>
-            Graduated from <strong>Instituto Nacional de México</strong> with a
-            degree in <strong>Computer Systems Engineering</strong>.
-          </p>
 
-          <!-- Existing About Me text -->
-          <p>
-            I'm an entry-level <strong>software engineer</strong> with
-            experience as Software Engineer Intern. My skills include
-            JavaScript, React, Angular, Spring Boot, Python, SQL, Linux, and
-            Docker. I am currently learning the basics of working with the cloud
-            using AWS, I like reading books about history and software
-            engineering. I would like to someday learn and transition into the
-            DevOps role. I'm eager to learn more and grow, both as a profesional
-            and as a person.
-          </p>
+      <!-- Option 3: Bento Grid Layout -->
+      <div class="about-content" id="bento-layout">
+        <div class="about-item about-education">
+          <h3 class="about-header">Education & Background</h3>
+          <div class="about-text">
+            <p>
+              Graduated from <strong>Instituto Nacional de México</strong> with
+              a degree in <strong>Computer Systems Engineering</strong>.
+            </p>
+            <p>
+              Specialized in software development, system architecture, and
+              modern web technologies.
+            </p>
+            <p style="margin-top: 1.5rem">
+              I'm an entry-level <strong>software engineer</strong> with
+              hands-on experience as a Software Engineer Intern, passionate
+              about creating efficient, scalable solutions.
+            </p>
+          </div>
+        </div>
+        <div class="about-item about-personal">
+          <h3 class="about-header">Personal Journey</h3>
+          <div class="about-text">
+            <p>
+              Currently learning AWS cloud fundamentals and exploring DevOps
+              practices. I enjoy reading about history and software engineering,
+              always seeking to expand my knowledge.
+            </p>
+            <p>
+              I'm eager to grow both professionally and personally, with
+              aspirations to transition into DevOps roles in the future.
+            </p>
+          </div>
+        </div>
+        <div class="about-item about-skills-preview">
+          <h3 class="about-header">Core Technologies</h3>
+          <div class="skills-tags">
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Angular</span>
+            <span class="skill-tag">Spring Boot</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">Linux</span>
+            <span class="skill-tag">Docker</span>
+          </div>
         </div>
       </div>
     </section>
+
     <section id="experience" class="content-section" data-section="experience">
       <h2 class="section-title">EXPERIENCE</h2>
       <div class="experience-content">
@@ -101,84 +129,84 @@
     <section id="skills" class="content-section" data-section="skills">
       <h2 class="section-title">SKILLS</h2>
       <div class="skills-container">
-        <div class="skill-category">
+        <!-- Frontend -->
+        <div class="skills-card frontend">
           <h3>Frontend Development</h3>
-          <div class="skills-grid">
-            <div class="skill-item">
-              <div class="skill-name">React</div>
+          <div class="skills-icons">
+            <div class="skill-icon">
+              <img src="icons/react.svg" alt="React" />
+              <span>React</span>
             </div>
-            <div class="skill-item">
-              <div class="skill-name">Angular</div>
+            <div class="skill-icon">
+              <img src="icons/angular.svg" alt="Angular" />
+              <span>Angular</span>
             </div>
-            <div class="skill-item">
-              <div class="skill-name">TypeScript</div>
+            <div class="skill-icon">
+              <img src="icons/icons8-typescript-144.svg" alt="TypeScript" />
+              <span>TypeScript</span>
             </div>
-            <div class="skill-item">
-              <div class="skill-name">Next.js</div>
+
+            <div class="skill-icon">
+              <img src="icons/tailwindcss.svg" alt="Tailwind CSS" />
+              <span>Tailwind CSS</span>
             </div>
-            <div class="skill-item">
-              <div class="skill-name">Tailwind CSS</div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-name">JavaScript</div>
+            <div class="skill-icon">
+              <img src="icons/javascript.svg" alt="JavaScript" />
+              <span>JavaScript</span>
             </div>
           </div>
         </div>
 
-        <div class="skill-category">
+        <!-- Backend -->
+        <div class="skills-card backend">
           <h3>Backend Development</h3>
-          <div class="skills-grid">
-            <div class="skill-item">
-              <div class="skill-name">Node.js</div>
+          <div class="skills-icons">
+            <div class="skill-icon">
+              <img src="icons/nodejs.svg" alt="Node.js" />
+              <span>Node.js</span>
             </div>
-            <div class="skill-item">
-              <div class="skill-name">Express</div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-name">Spring Boot</div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-name">REST APIs</div>
+
+            <div class="skill-icon">
+              <img src="icons/icons8-spring-boot.svg" alt="Spring Boot" />
+              <span>Spring Boot</span>
             </div>
           </div>
         </div>
 
-        <div class="skill-category">
+        <!-- Database & Cloud -->
+        <div class="skills-card database">
           <h3>Database & Cloud</h3>
-          <div class="skills-grid">
-            <div class="skill-item">
-              <div class="skill-name">PostgreSQL</div>
+          <div class="skills-icons">
+            <div class="skill-icon">
+              <img src="icons/pgsql-svgrepo-com.svg" alt="PostgreSQL" />
+              <span>PostgreSQL</span>
             </div>
-            <div class="skill-item">
-              <div class="skill-name">MongoDB</div>
+            <div class="skill-icon">
+              <img src="icons/mongo-svgrepo-com.svg" alt="MongoDB" />
+              <span>MongoDB</span>
             </div>
-            <div class="skill-item">
-              <div class="skill-name">MySQL</div>
+            <div class="skill-icon">
+              <img src="icons/mysql-logo-svgrepo-com.svg" alt="MySQL" />
+              <span>MySQL</span>
             </div>
-            <div class="skill-item">
-              <div class="skill-name">Docker</div>
-            </div>
-
-            <div class="skill-item">
-              <div class="skill-name">SQL</div>
+            <div class="skill-icon">
+              <img src="icons/docker.svg" alt="Docker" />
+              <span>Docker</span>
             </div>
           </div>
         </div>
 
-        <div class="skill-category">
+        <!-- Tools & Other -->
+        <div class="skills-card tools">
           <h3>Tools & Other</h3>
-          <div class="skills-grid">
-            <div class="skill-item">
-              <div class="skill-name">Git</div>
+          <div class="skills-icons">
+            <div class="skill-icon">
+              <img src="icons/git.svg" alt="Git" />
+              <span>Git</span>
             </div>
-            <div class="skill-item">
-              <div class="skill-name">Linux</div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-name">React Native</div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-name">SAP B1</div>
+            <div class="skill-icon">
+              <img src="icons/linux-svgrepo-com.svg" alt="Linux" />
+              <span>Linux</span>
             </div>
           </div>
         </div>
