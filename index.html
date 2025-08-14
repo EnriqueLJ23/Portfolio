@@ -21,14 +21,19 @@
     />
   </head>
   <body>
-    <div id="blob"></div>
-    <div id="blur"></div>
-
+    <div class="gradient-background">
+      <div class="gradient-sphere sphere-1"></div>
+      <div class="gradient-sphere sphere-2"></div>
+      <div class="gradient-sphere sphere-3"></div>
+      <div class="glow"></div>
+      <div class="grid-overlay"></div>
+      <div class="noise-overlay"></div>
+      <div class="particles-container" id="particles-container"></div>
+    </div>
     <nav class="navi">
       <h1>PORTFOLIO</h1>
-      <div id="menu-toggle-container">
-        <span id="menu-text">Menu</span>
-        <button id="menu-toggle"></button>
+      <div id="toggle-container">
+        <button id="menu-toggle">Return</button>
       </div>
     </nav>
 
@@ -96,169 +101,167 @@
     <section id="skills" class="content-section" data-section="skills">
       <h2 class="section-title">SKILLS</h2>
       <div class="skills-container">
-        <div class="skills-category">
+        <div class="skill-category">
           <h3>Frontend Development</h3>
-          <div class="skills-row">
+          <div class="skills-grid">
             <div class="skill-item">
-              <i class="fab fa-react skill-icon"></i>
-              <span class="skill-name">React</span>
+              <div class="skill-name">React</div>
             </div>
             <div class="skill-item">
-              <i class="fab fa-angular skill-icon"></i>
-              <span class="skill-name">Angular.js</span>
+              <div class="skill-name">Angular</div>
             </div>
             <div class="skill-item">
-              <i class="fab fa-js-square skill-icon"></i>
-              <span class="skill-name">TypeScript</span>
+              <div class="skill-name">TypeScript</div>
             </div>
             <div class="skill-item">
-              <i class="fas fa-rocket skill-icon"></i>
-              <span class="skill-name">Next.js</span>
+              <div class="skill-name">Next.js</div>
             </div>
             <div class="skill-item">
-              <i class="fab fa-css3-alt skill-icon"></i>
-              <span class="skill-name">Tailwind CSS</span>
+              <div class="skill-name">Tailwind CSS</div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">JavaScript</div>
             </div>
           </div>
         </div>
 
-        <div class="skills-category">
+        <div class="skill-category">
           <h3>Backend Development</h3>
-          <div class="skills-row">
+          <div class="skills-grid">
             <div class="skill-item">
-              <i class="fab fa-node-js skill-icon"></i>
-              <span class="skill-name">Node.js</span>
+              <div class="skill-name">Node.js</div>
             </div>
             <div class="skill-item">
-              <i class="fas fa-server skill-icon"></i>
-              <span class="skill-name">Express</span>
+              <div class="skill-name">Express</div>
             </div>
             <div class="skill-item">
-              <i class="fab fa-java skill-icon"></i>
-              <span class="skill-name">Spring Boot</span>
+              <div class="skill-name">Spring Boot</div>
             </div>
             <div class="skill-item">
-              <i class="fas fa-exchange-alt skill-icon"></i>
-              <span class="skill-name">REST APIs</span>
+              <div class="skill-name">REST APIs</div>
             </div>
           </div>
         </div>
 
-        <div class="skills-category">
+        <div class="skill-category">
           <h3>Database & Cloud</h3>
-          <div class="skills-row">
+          <div class="skills-grid">
             <div class="skill-item">
-              <i class="fas fa-database skill-icon"></i>
-              <span class="skill-name">PostgreSQL</span>
+              <div class="skill-name">PostgreSQL</div>
             </div>
             <div class="skill-item">
-              <i class="fas fa-leaf skill-icon"></i>
-              <span class="skill-name">MongoDB</span>
+              <div class="skill-name">MongoDB</div>
             </div>
             <div class="skill-item">
-              <i class="fas fa-database skill-icon"></i>
-              <span class="skill-name">MySQL</span>
+              <div class="skill-name">MySQL</div>
             </div>
             <div class="skill-item">
-              <i class="fab fa-docker skill-icon"></i>
-              <span class="skill-name">Docker</span>
+              <div class="skill-name">Docker</div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-name">SQL</div>
             </div>
           </div>
         </div>
 
-        <div class="skills-category">
+        <div class="skill-category">
           <h3>Tools & Other</h3>
-          <div class="skills-row">
+          <div class="skills-grid">
             <div class="skill-item">
-              <i class="fab fa-git-alt skill-icon"></i>
-              <span class="skill-name">Git</span>
+              <div class="skill-name">Git</div>
             </div>
             <div class="skill-item">
-              <i class="fab fa-linux skill-icon"></i>
-              <span class="skill-name">Linux</span>
+              <div class="skill-name">Linux</div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">React Native</div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">SAP B1</div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-   <section id="projects" class="content-section" data-section="projects">
+    <section id="projects" class="content-section" data-section="projects">
       <h2 class="section-title">PROJECTS</h2>
       <div class="projects-container">
-       <div class="project-item">
-  <div class="project-header">
-    <div class="project-title-wrapper">
-      <h3 class="project-title">Personal Finance Manager</h3>
-    </div>
-  </div>
-  <p class="project-description">
-    A full-stack application to track income, expenses, budgets, and savings goals. 
-    Includes authentication, category-based spending analysis, and interactive charts 
-    for budget progress. Designed with responsive UI and secure backend APIs.
-  </p>
-  <div class="project-tech-stack">
-    <span class="tech-badge">Angular</span>
-    <span class="tech-badge">Spring Boot</span>
-    <span class="tech-badge">MySQL</span>
-    <span class="tech-badge">JWT Authentication</span>
-  </div>
-          <div class="project-links">
-            <a href="#" target="_blank" class="project-link">Live Demo</a>
-            <a href="https://github.com/EnriqueLJ23/finances-frontend" target="_blank" class="project-link secondary">GitHub</a>
+        <div class="project-card">
+          <div class="project-preview finance">
+            <div class="project-icon">screenshot here</div>
+          </div>
+          <div class="project-content">
+            <div>
+              <h3 class="project-title">Personal Finance Manager</h3>
+              <p class="project-description">
+                A full-stack application to track income, expenses, budgets, and
+                savings goals. Includes authentication, category-based spending
+                analysis, and interactive charts for budget progress.
+              </p>
+              <div class="project-tech-stack">
+                <span class="tech-badge">Angular</span>
+                <span class="tech-badge">Spring Boot</span>
+                <span class="tech-badge">MySQL</span>
+                <span class="tech-badge">JWT Authentication</span>
+              </div>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link">Live Demo</a>
+              <a
+                href="https://github.com/EnriqueLJ23/finances-frontend"
+                target="_blank"
+                class="project-link secondary"
+                >GitHub</a
+              >
+            </div>
           </div>
         </div>
 
-      <div class="project-item">
-  <div class="project-header">
-    <div class="project-title-wrapper">
-      <h3 class="project-title">Web-Based OS Desktop Simulation</h3>
-    </div>
-  </div>
-  <p class="project-description">
-    A playful, interactive simulation of a desktop operating system built entirely with Angular. 
-    Features draggable windows, a functional taskbar, and responsive UI elements to mimic a real OS environment — 
-    all rendered in the browser without external libraries.
-  </p>
-  <div class="project-tech-stack">
-    <span class="tech-badge">Angular</span>
-    <span class="tech-badge">TypeScript</span>
-    <span class="tech-badge">HTML5</span>
-    <span class="tech-badge">CSS3</span>
-  </div>
-  <div class="project-links">
-    <a href="https://enriquelj23.github.io/WebOs/" target="_blank" class="project-link">Live Demo</a>
-    <a href="https://github.com/EnriqueLJ23/WebOs"  target="_blank" class="project-link secondary">GitHub</a>
-  </div>
-</div>
- 
-  </section>
-
-    <footer class="footer-contact" data-section="contact">
-      <h2 class="section-title">CONTACT INFO</h2>
-      <div class="contact-content">
-        <div class="contact-info">
-          <div class="contact-item">
-            <h3>Email</h3>
-            <p>
-              <a href="mailto:jassoluna8@gmail.com">jassoluna8@gmail.com</a>
-            </p>
+        <div class="project-card">
+          <div class="project-preview webos">
+            <div class="project-icon">screenshot here</div>
           </div>
-       
-        </div>
-        <div class="footer-bottom">
-          <p>&copy; 2025 Enrique Luna. All rights reserved.</p>
+          <div class="project-content">
+            <div>
+              <h3 class="project-title">Web-Based OS Desktop Simulation</h3>
+              <p class="project-description">
+                A playful, interactive simulation of a desktop operating system
+                built entirely with Angular. Features draggable windows, a
+                functional taskbar, and responsive UI elements.
+              </p>
+              <div class="project-tech-stack">
+                <span class="tech-badge">Angular</span>
+                <span class="tech-badge">TypeScript</span>
+                <span class="tech-badge">HTML5</span>
+                <span class="tech-badge">CSS3</span>
+              </div>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://enriquelj23.github.io/WebOs/"
+                class="project-link"
+                target="_blank"
+                >Live Demo</a
+              >
+              <a
+                href="https://github.com/EnriqueLJ23/WebOs"
+                class="project-link secondary"
+                target="_blank"
+                >GitHub</a
+              >
+            </div>
+          </div>
         </div>
       </div>
+    </section>
+
+    <footer>
+      <h2>Contact Info</h2>
+      <p><a href="mailto:jassoluna8@gmail.com">jassoluna8@gmail.com</a></p>
+      <p>&copy; 2025 Enrique Luna. All rights reserved.</p>
     </footer>
-
-    <div id="menu">
-      <div id="menu-items">
-        <a href="#about" class="menu-item">ABOUT ME</a>
-        <a href="#skills" class="menu-item">SKILLS</a>
-        <a href="#projects" class="menu-item">PROJECTS</a>
-        <a href="#contact" class="menu-item">CONTACT INFO</a>
-      </div>
-    </div>
 
     <script src="script.js"></script>
   </body>
