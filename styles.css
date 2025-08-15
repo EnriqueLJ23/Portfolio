@@ -857,73 +857,10 @@ footer a:hover {
 
   .skills-container {
     grid-template-columns: 1fr;
-  }
-
-  .skills-container .frontend,
-  .skills-container .database {
-    grid-row: span 1;
-  }
-
-  .projects-container {
-    grid-template-columns: 1fr;
-  }
-
-  .dialog-content {
-    padding: 2rem;
-  }
-
-  .dialog-title {
-    font-size: 2rem;
-  }
-
-  .dialog-links {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .dialog-link {
-    width: 100%;
-    max-width: 250px;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero {
-    padding: 0 1rem;
-  }
-
-  .section-title {
-    margin-bottom: 2rem;
-  }
-
-  .about-item,
-  .skills-card {
-    padding: 1.5rem;
-  }
-
-  .skills-icons {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .dialog-content {
-    padding: 1.5rem;
-  }
-
-  .dialog-title {
-    font-size: 1.8rem;
-  }
-
-  .dialog-description {
-    font-size: 1.1rem;
-  }
-}
-/* Skills Section Mobile Fixes */
-@media (max-width: 768px) {
-  .skills-container {
-    grid-template-columns: 1fr;
     grid-template-rows: auto;
     max-width: 100%;
     padding: 0 1rem;
+    gap: 1.5rem;
   }
 
   .skills-container .frontend,
@@ -955,10 +892,11 @@ footer a:hover {
   .skill-icon span {
     font-size: 0.85rem;
   }
-}
 
-/* Dialog Mobile Fixes */
-@media (max-width: 768px) {
+  .projects-container {
+    grid-template-columns: 1fr;
+  }
+
   .dialog {
     width: 95%;
     max-width: none;
@@ -967,7 +905,7 @@ footer a:hover {
   }
 
   .dialog-image {
-    height: 200px;
+    height: 250px; /* Consolidated final value */
   }
 
   .dialog-content {
@@ -1002,10 +940,27 @@ footer a:hover {
     padding: 1rem 1.5rem;
     font-size: 0.9rem;
   }
+
+  /* More height for experience details on smaller screens */
+  .experience-item.active .experience-details {
+    max-height: 500px;
+  }
 }
 
-/* Extra Small Mobile Devices */
 @media (max-width: 480px) {
+  .hero {
+    padding: 0 1rem;
+  }
+
+  .section-title {
+    margin-bottom: 2rem;
+  }
+
+  .about-item,
+  .skills-card {
+    padding: 1.5rem;
+  }
+
   .skills-container {
     padding: 0 0.5rem;
     gap: 1rem;
@@ -1053,7 +1008,7 @@ footer a:hover {
   }
 
   .dialog-image {
-    height: 150px;
+    height: 200px; /* Consolidated final value */
   }
 
   .dialog-content {
@@ -1086,6 +1041,11 @@ footer a:hover {
     padding: 0.8rem 1.2rem;
     font-size: 0.85rem;
   }
+
+  /* More height for experience details */
+  .experience-item.active .experience-details {
+    max-height: 600px;
+  }
 }
 
 /* Landscape mobile orientation */
@@ -1101,15 +1061,9 @@ footer a:hover {
   .dialog-content {
     padding: 1rem;
   }
-}
-@media (max-width: 768px) {
-  .dialog-image {
-    height: 250px; /* Smaller but consistent height on mobile */
-  }
-}
 
-@media (max-width: 480px) {
-  .dialog-image {
-    height: 200px; /* Even smaller for very small screens */
+  /* More height for experience details in landscape */
+  .experience-item.active .experience-details {
+    max-height: 550px;
   }
 }
