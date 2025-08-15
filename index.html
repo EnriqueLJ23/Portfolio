@@ -30,17 +30,22 @@
       <div class="noise-overlay"></div>
       <div class="particles-container" id="particles-container"></div>
     </div>
-    <nav class="navi">
-      <h1>PORTFOLIO</h1>
-      <div id="toggle-container">
-        <button id="menu-toggle">Return</button>
-      </div>
-    </nav>
+
+    <header>
+      <nav class="navi">
+        <h1>PORTFOLIO</h1>
+        <div id="toggle-container">
+          <button id="menu-toggle">Return</button>
+        </div>
+      </nav>
+    </header>
 
     <section class="hero" data-section="hero">
       <div>
         <h1 data-value="ENRIQUE LUNA ">ENRIQUE LUNA</h1>
-        <div class="hero-subtitle">Computer Systems Engineer</div>
+        <div class="hero-subtitle">
+          Computer Systems Engineer - FullStack Developer
+        </div>
       </div>
     </section>
 
@@ -101,24 +106,26 @@
       <h2 class="section-title">EXPERIENCE</h2>
       <div class="experience-content">
         <div class="experience-item">
-          <h2 class="experience-sub-title">Software Engineer Intern</h2>
-          <h2 class="company-date-sub-title">
-            Power Softec • 02/2025 - 06/2025
-          </h2>
-          <div class="article-container">
+          <button class="experience-header" aria-expanded="false">
+            <div class="experience-header-content">
+              <h3>Software Engineer Intern</h3>
+              <p>Power Softec • 02/2025 - 06/2025</p>
+            </div>
+            <span class="accordion-toggle">▼</span>
+          </button>
+          <div class="experience-details">
             <ul>
               <li>
                 Developed an Android app for warehouse inventory administration
-                using react native
+                using React Native
               </li>
               <li>
-                Created an express server that uses the sap service layer api to
-                comunicate with SAP B1 through different REST endpoints
+                Created an Express server that communicates with SAP B1 via the
+                SAP Service Layer API
               </li>
-              <li>Implemented JWT auth</li>
+              <li>Implemented JWT authentication for secure user sessions</li>
               <li>
-                Gained hands-on experience in working with apis from the backend
-                and
+                Integrated APIs and third-party services in backend workflows
               </li>
             </ul>
           </div>
@@ -135,24 +142,19 @@
           <div class="skills-icons">
             <div class="skill-icon">
               <img src="icons/react.svg" alt="React" />
-              <span>React</span>
             </div>
             <div class="skill-icon">
               <img src="icons/angular.svg" alt="Angular" />
-              <span>Angular</span>
             </div>
             <div class="skill-icon">
               <img src="icons/icons8-typescript-144.svg" alt="TypeScript" />
-              <span>TypeScript</span>
             </div>
 
             <div class="skill-icon">
               <img src="icons/tailwindcss.svg" alt="Tailwind CSS" />
-              <span>Tailwind CSS</span>
             </div>
             <div class="skill-icon">
               <img src="icons/javascript.svg" alt="JavaScript" />
-              <span>JavaScript</span>
             </div>
           </div>
         </div>
@@ -163,12 +165,10 @@
           <div class="skills-icons">
             <div class="skill-icon">
               <img src="icons/nodejs.svg" alt="Node.js" />
-              <span>Node.js</span>
             </div>
 
             <div class="skill-icon">
               <img src="icons/icons8-spring-boot.svg" alt="Spring Boot" />
-              <span>Spring Boot</span>
             </div>
           </div>
         </div>
@@ -179,19 +179,15 @@
           <div class="skills-icons">
             <div class="skill-icon">
               <img src="icons/pgsql-svgrepo-com.svg" alt="PostgreSQL" />
-              <span>PostgreSQL</span>
             </div>
             <div class="skill-icon">
               <img src="icons/mongo-svgrepo-com.svg" alt="MongoDB" />
-              <span>MongoDB</span>
             </div>
             <div class="skill-icon">
               <img src="icons/mysql-logo-svgrepo-com.svg" alt="MySQL" />
-              <span>MySQL</span>
             </div>
             <div class="skill-icon">
               <img src="icons/docker.svg" alt="Docker" />
-              <span>Docker</span>
             </div>
           </div>
         </div>
@@ -216,74 +212,58 @@
     <section id="projects" class="content-section" data-section="projects">
       <h2 class="section-title">PROJECTS</h2>
       <div class="projects-container">
-        <div class="project-card">
-          <div class="project-preview finance">
-            <div class="project-icon">screenshot here</div>
+        <!-- Finance Project Card -->
+        <div class="project-card" onclick="openProjectDialog('finance')">
+          <div class="project-click-hint">Click to view</div>
+          <div class="project-preview">
+            <img src="icons/preview_finance.png" alt="" />
           </div>
-          <div class="project-content">
-            <div>
-              <h3 class="project-title">Personal Finance Manager</h3>
-              <p class="project-description">
-                A full-stack application to track income, expenses, budgets, and
-                savings goals. Includes authentication, category-based spending
-                analysis, and interactive charts for budget progress.
-              </p>
-              <div class="project-tech-stack">
-                <span class="tech-badge">Angular</span>
-                <span class="tech-badge">Spring Boot</span>
-                <span class="tech-badge">MySQL</span>
-                <span class="tech-badge">JWT Authentication</span>
-              </div>
-            </div>
-            <div class="project-links">
-              <a href="#" class="project-link">Live Demo</a>
-              <a
-                href="https://github.com/EnriqueLJ23/finances-frontend"
-                target="_blank"
-                class="project-link secondary"
-                >GitHub</a
-              >
-            </div>
+          <div class="project-card-content">
+            <h3 class="project-card-title">Personal Finance Manager</h3>
           </div>
         </div>
 
-        <div class="project-card">
-          <div class="project-preview webos">
-            <div class="project-icon">screenshot here</div>
+        <!-- WebOS Project Card -->
+        <div class="project-card" onclick="openProjectDialog('webos')">
+          <div class="project-click-hint">Click to view</div>
+          <div class="project-preview">
+            <img src="icons/preview_webos.png" alt="" />
           </div>
-          <div class="project-content">
-            <div>
-              <h3 class="project-title">Web-Based OS Desktop Simulation</h3>
-              <p class="project-description">
-                A playful, interactive simulation of a desktop operating system
-                built entirely with Angular. Features draggable windows, a
-                functional taskbar, and responsive UI elements.
-              </p>
-              <div class="project-tech-stack">
-                <span class="tech-badge">Angular</span>
-                <span class="tech-badge">TypeScript</span>
-                <span class="tech-badge">HTML5</span>
-                <span class="tech-badge">CSS3</span>
-              </div>
-            </div>
-            <div class="project-links">
-              <a
-                href="https://enriquelj23.github.io/WebOs/"
-                class="project-link"
-                target="_blank"
-                >Live Demo</a
-              >
-              <a
-                href="https://github.com/EnriqueLJ23/WebOs"
-                class="project-link secondary"
-                target="_blank"
-                >GitHub</a
-              >
-            </div>
+          <div class="project-card-content">
+            <h3 class="project-card-title">Web-Based OS Desktop Simulation</h3>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- Project Dialogs -->
+    <div class="dialog-overlay" id="dialog-overlay">
+      <div class="dialog" id="project-dialog">
+        <button class="dialog-close" onclick="closeProjectDialog()">
+          &times;
+        </button>
+        <div class="dialog-image" id="dialog-image">
+          <div class="dialog-image-placeholder" id="dialog-image-placeholder">
+            Project Screenshot
+          </div>
+        </div>
+        <div class="dialog-content">
+          <p class="dialog-description" id="dialog-description">
+            Project description goes here.
+          </p>
+
+          <div class="dialog-tech-section">
+            <div class="dialog-tech-stack" id="dialog-tech-stack">
+              <!-- Tech badges will be inserted here -->
+            </div>
+          </div>
+
+          <div class="dialog-links" id="dialog-links">
+            <!-- Project links will be inserted here -->
+          </div>
+        </div>
+      </div>
+    </div>
 
     <footer>
       <h2>Contact Info</h2>
