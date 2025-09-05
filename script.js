@@ -216,3 +216,18 @@ document.querySelector(".hero h1").onmouseover = (event) => {
     iteration += 1 / 3;
   }, 30);
 };
+
+// Initialize particles system
+const particlesContainer = document.getElementById("particles-container");
+
+function initParticles() {
+  // Create initial particles
+  for (let i = 0; i < 50; i++) {
+    createParticle(i);
+  }
+}
+
+// Start the particles system when page loads
+document.addEventListener("DOMContentLoaded", () => {
+  initParticles();
+});
