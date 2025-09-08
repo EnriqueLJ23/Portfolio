@@ -166,10 +166,49 @@ body {
 
 .particle {
   position: absolute;
-  background: white;
   border-radius: 50%;
   opacity: 0;
   pointer-events: none;
+  box-shadow: 0 0 6px currentColor;
+  transition: all 0.3s ease;
+}
+
+/* Different particle types with unique colors */
+.particle-primary {
+  background: radial-gradient(circle, #ff3a82, #ff6b9d);
+  box-shadow: 0 0 10px #ff3a82, 0 0 20px #ff3a82aa;
+}
+
+.particle-secondary {
+  background: radial-gradient(circle, #5233ff, #667eea);
+  box-shadow: 0 0 10px #5233ff, 0 0 20px #5233ffaa;
+}
+
+.particle-accent {
+  background: radial-gradient(circle, #00b7ff, #62d8f1);
+  box-shadow: 0 0 10px #00b7ff, 0 0 20px #00b7ffaa;
+}
+
+.particle-glow {
+  background: radial-gradient(circle, #ffffff, #f0f0f0);
+  box-shadow: 0 0 15px #ffffff, 0 0 25px #ffffff66;
+}
+
+.particle-trail {
+  background: radial-gradient(circle, #ff3a82, transparent);
+  box-shadow: 0 0 8px #ff3a82, 0 0 16px #ff3a82aa;
+}
+
+/* Pulsing animation for particles */
+@keyframes pulse-glow {
+  0% {
+    box-shadow: 0 0 5px currentColor, 0 0 10px currentColor;
+    opacity: 0.6;
+  }
+  100% {
+    box-shadow: 0 0 20px currentColor, 0 0 30px currentColor;
+    opacity: 1;
+  }
 }
 
 /* navigation bar styling*/
@@ -196,8 +235,8 @@ body {
   letter-spacing: 0.2em;
 }
 
-/* nav button */
-#menu-toggle {
+/* CV download button */
+#cv-download {
   background: linear-gradient(90deg, #ff3a82, #5233ff);
   color: white;
   font-weight: 600;
@@ -210,11 +249,32 @@ body {
   text-transform: uppercase;
   letter-spacing: 1px;
   box-shadow: 0 4px 20px rgba(255, 58, 130, 0.3);
+  position: relative;
+  overflow: hidden;
 }
 
-#menu-toggle:hover {
+#cv-download:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 25px rgba(255, 58, 130, 0.4);
+}
+
+#cv-download:active {
+  transform: translateY(0px);
+  box-shadow: 0 4px 20px rgba(255, 58, 130, 0.3);
+}
+
+/* Add download icon effect */
+#cv-download::after {
+  content: "⬇";
+  position: absolute;
+  right: 0.5rem;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+#cv-download:hover::after {
+  opacity: 1;
+  transform: translateY(2px);
 }
 /* Content Section styles */
 .content-section {
@@ -682,22 +742,103 @@ body {
   color: #ff3a82;
 }
 
-.dialog-image {
+.dialog-gallery {
   width: 100%;
   height: 500px;
   background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  overflow: hidden; /* Prevent overflow */
 }
 
-.dialog-image img {
+.gallery-image-container {
   width: 100%;
-  max-height: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.gallery-image {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   object-position: center;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.gallery-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-nav:hover {
+  background: rgba(102, 126, 234, 0.8);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.gallery-prev {
+  left: 20px;
+}
+
+.gallery-next {
+  right: 20px;
+}
+
+.gallery-indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.gallery-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.gallery-dot.active {
+  background: #667eea;
+  border-color: #667eea;
+  box-shadow: 0 0 10px rgba(102, 126, 234, 0.5);
+}
+
+.gallery-dot:hover {
+  border-color: #667eea;
+  transform: scale(1.2);
 }
 
 .dialog-content {
@@ -838,7 +979,7 @@ footer a:hover {
     font-size: 1rem;
   }
 
-  #menu-toggle {
+  #cv-download {
     padding: 0.6rem 1rem;
     font-size: 0.8rem;
   }
@@ -904,8 +1045,31 @@ footer a:hover {
     max-height: 85vh;
   }
 
-  .dialog-image {
-    height: 250px; /* Consolidated final value */
+  .dialog-gallery {
+    height: 250px;
+  }
+
+  .gallery-nav {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+
+  .gallery-prev {
+    left: 10px;
+  }
+
+  .gallery-next {
+    right: 10px;
+  }
+
+  .gallery-indicators {
+    bottom: 10px;
+  }
+
+  .gallery-dot {
+    width: 10px;
+    height: 10px;
   }
 
   .dialog-content {
@@ -1007,8 +1171,8 @@ footer a:hover {
     font-size: 1.5rem;
   }
 
-  .dialog-image {
-    height: 200px; /* Consolidated final value */
+  .dialog-gallery {
+    height: 200px;
   }
 
   .dialog-content {
@@ -1054,7 +1218,7 @@ footer a:hover {
     max-height: 95vh;
   }
 
-  .dialog-image {
+  .dialog-gallery {
     height: 120px;
   }
 

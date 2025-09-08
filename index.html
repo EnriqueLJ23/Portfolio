@@ -35,7 +35,7 @@
       <nav class="navi">
         <h1>PORTFOLIO</h1>
         <div id="toggle-container">
-          <button id="menu-toggle">Return</button>
+          <button id="cv-download">Download CV</button>
         </div>
       </nav>
     </header>
@@ -233,6 +233,17 @@
             <h3 class="project-card-title">Web-Based OS Desktop Simulation</h3>
           </div>
         </div>
+
+        <!-- WMS-One Project Card -->
+        <div class="project-card" onclick="openProjectDialog('wmsone')">
+          <div class="project-click-hint">Click to view</div>
+          <div class="project-preview">
+            <img src="icons/preview_wmsone.svg" alt="" />
+          </div>
+          <div class="project-card-content">
+            <h3 class="project-card-title">WMS-One - Warehouse Management System</h3>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -242,9 +253,16 @@
         <button class="dialog-close" onclick="closeProjectDialog()">
           &times;
         </button>
-        <div class="dialog-image" id="dialog-image">
-          <div class="dialog-image-placeholder" id="dialog-image-placeholder">
-            Project Screenshot
+        <div class="dialog-gallery" id="dialog-gallery">
+          <div class="gallery-container">
+            <button class="gallery-nav gallery-prev" id="gallery-prev">&lt;</button>
+            <div class="gallery-image-container" id="gallery-image-container">
+              <img class="gallery-image" id="gallery-image" src="" alt="Project Screenshot" />
+            </div>
+            <button class="gallery-nav gallery-next" id="gallery-next">&gt;</button>
+          </div>
+          <div class="gallery-indicators" id="gallery-indicators">
+            <!-- Dots will be generated here -->
           </div>
         </div>
         <div class="dialog-content">

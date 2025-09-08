@@ -1,0 +1,65 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#1a1a1a"/>
+  
+  <!-- Grid background -->
+  <defs>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#333" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+  <rect width="400" height="300" fill="url(#grid)"/>
+  
+  <!-- Main warehouse building -->
+  <rect x="50" y="120" width="300" height="120" fill="#2a2a2a" stroke="#ff3a82" stroke-width="2"/>
+  
+  <!-- Roof -->
+  <polygon points="40,120 200,80 360,120" fill="#333" stroke="#ff3a82" stroke-width="1"/>
+  
+  <!-- Loading dock -->
+  <rect x="30" y="200" width="40" height="40" fill="#444" stroke="#667eea" stroke-width="1"/>
+  
+  <!-- Truck -->
+  <rect x="5" y="210" width="35" height="15" fill="#667eea"/>
+  <circle cx="12" cy="232" r="4" fill="#333"/>
+  <circle cx="32" cy="232" r="4" fill="#333"/>
+  
+  <!-- Warehouse shelves -->
+  <rect x="80" y="140" width="8" height="80" fill="#ff3a82"/>
+  <rect x="100" y="140" width="8" height="80" fill="#ff3a82"/>
+  <rect x="120" y="140" width="8" height="80" fill="#ff3a82"/>
+  <rect x="140" y="140" width="8" height="80" fill="#ff3a82"/>
+  
+  <!-- Mobile device mockup -->
+  <rect x="280" y="50" width="80" height="140" fill="#000" stroke="#667eea" stroke-width="2" rx="8"/>
+  <rect x="285" y="60" width="70" height="120" fill="#1a1a1a"/>
+  
+  <!-- Phone screen content -->
+  <rect x="290" y="70" width="60" height="8" fill="#ff3a82"/>
+  <rect x="290" y="85" width="40" height="6" fill="#667eea"/>
+  <rect x="290" y="95" width="50" height="6" fill="#667eea"/>
+  <rect x="290" y="105" width="30" height="6" fill="#667eea"/>
+  
+  <!-- Barcode -->
+  <rect x="295" y="120" width="2" height="20" fill="#fff"/>
+  <rect x="298" y="120" width="1" height="20" fill="#fff"/>
+  <rect x="300" y="120" width="3" height="20" fill="#fff"/>
+  <rect x="304" y="120" width="1" height="20" fill="#fff"/>
+  <rect x="306" y="120" width="2" height="20" fill="#fff"/>
+  <rect x="309" y="120" width="1" height="20" fill="#fff"/>
+  <rect x="311" y="120" width="2" height="20" fill="#fff"/>
+  <rect x="314" y="120" width="3" height="20" fill="#fff"/>
+  
+  <!-- Database icon -->
+  <ellipse cx="320" cy="165" rx="15" ry="4" fill="#667eea"/>
+  <rect x="305" y="161" width="30" height="8" fill="#667eea"/>
+  <ellipse cx="320" cy="161" rx="15" ry="4" fill="#764ba2"/>
+  
+  <!-- Connection lines -->
+  <line x1="280" y1="150" x2="250" y2="180" stroke="#ff3a82" stroke-width="2" stroke-dasharray="3,3"/>
+  <line x1="200" y1="180" x2="160" y2="180" stroke="#667eea" stroke-width="2" stroke-dasharray="3,3"/>
+  
+  <!-- Title -->
+  <text x="200" y="30" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="20" font-weight="bold">WMS-One</text>
+  <text x="200" y="50" text-anchor="middle" fill="#667eea" font-family="Arial, sans-serif" font-size="12">Warehouse Management System</text>
+</svg>
