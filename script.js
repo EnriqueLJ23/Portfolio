@@ -442,7 +442,7 @@ function initCVDownload() {
 function downloadCV() {
   // Create a temporary link element for download
   const link = document.createElement("a");
-  link.href = "cv/cv - Jesus Enrique Luna 1.pdf";
+  link.href = "cv/cv-Jesus_Enrique_Luna.pdf";
   link.download = "Enrique_Luna_CV.pdf";
   link.style.display = "none";
 
